@@ -1,0 +1,182 @@
+/* Base typography */
+body {
+  font-size: 16px;
+}
+
+/* Small devices (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 13px; /* updated text size */
+    text-align: center; /* center text on mobile */
+  }
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  } /* updated */
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  } /* updated */
+  h3 {
+    font-size: 18px;
+    text-align: center;
+  } /* updated */
+  p,
+  li,
+  span,
+  a {
+    font-size: 13px;
+    text-align: center;
+  } /* updated */
+}
+
+/* Medium devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 14px; /* updated text size */
+    text-align: center; /* center text on mobile */
+  }
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  } /* updated */
+  h2 {
+    font-size: 22px;
+    text-align: center;
+  } /* updated */
+  h3 {
+    font-size: 20px;
+    text-align: center;
+  } /* updated */
+  p,
+  li,
+  span,
+  a {
+    font-size: 14px;
+    text-align: center;
+  } /* updated */
+}
+
+/* Large devices (769px - 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  p,
+  li,
+  span,
+  a {
+    font-size: 16px;
+  }
+}
+
+/* Devices less than 1000px */
+@media (max-width: 1000px) {
+  body {
+    text-align: center;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  span,
+  a {
+    text-align: center;
+  }
+
+  /* Center all flex containers */
+  .container,
+  .row,
+  .section,
+  [class*="col-"],
+  [class*="grid-"],
+  [class*="flex-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Center images and other media */
+  img,
+  video,
+  iframe {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  /* Fix buttons to be centered */
+  button,
+  .button,
+  [class*="btn"] {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  /* Add some spacing between elements */
+  section,
+  .section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Extra large devices (993px - 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
+  body {
+    font-size: 17px;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 34px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  p,
+  li,
+  span,
+  a {
+    font-size: 17px;
+  }
+}
+
+/* Ultra large devices (min-width: 1201px) */
+@media (min-width: 1201px) {
+  body {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 38px;
+  }
+  h3 {
+    font-size: 34px;
+  }
+  p,
+  li,
+  span,
+  a {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,349 @@
+.productPage {
+  width: 100%;
+}
+
+.heroSection {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  padding: 6rem 0 5rem;
+  text-align: center;
+  margin-top: -2rem;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+}
+
+.heroContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.productTitle {
+  font-family: var(--font-heading);
+  font-size: var(--h2-font-size);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.productTagline {
+  font-family: var(--font-body);
+  font-size: var(--body-large-font-size);
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: transparent; /* Changed from white to transparent */
+  color: #fff; /* Changed to white */
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 18px;
+  padding: 0.8rem 2.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  border: 2px solid #fff; /* Added white border for contrast */
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Slight white background on hover */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: var(--h3-font-size);
+  color: var(--color-heading);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.sectionContent {
+  font-family: var(--font-body);
+  font-size: var(--body-medium-font-size);
+  line-height: 1.6;
+  color: var(--color-body);
+  margin-bottom: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background-color: var(--color-background-light);
+  border-radius: 12px;
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureTitle {
+  font-family: var(--font-heading);
+  font-size: var(--h4-font-size);
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+}
+
+.featureDescription {
+  font-family: var(--font-body);
+  font-size: var(--body-font-size);
+  color: var(--color-body);
+  line-height: 1.5;
+}
+
+.useCases {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.useCase {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background-color: var(--color-background-light);
+  border-radius: 12px;
+  padding: 2rem;
+  padding-bottom: 0;
+  margin-top: 20px;
+}
+
+.useCaseTitle {
+  font-family: var(--font-heading);
+  font-size: var(--h5-font-size);
+  color: var(--color-heading);
+  margin-bottom: 1.5rem;
+}
+
+.useCaseList {
+  font-family: var(--font-body);
+  font-size: var(--body-font-size);
+  color: var(--color-body);
+  padding-left: 1.5rem;
+}
+
+.useCaseList li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.useCaseList li strong,
+.useCaseList li span.title {
+  font-weight: 500;
+}
+
+.ctaSection {
+  background-color: var(--color-background-section);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.ctaContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.ctaTitle {
+  font-family: var(--font-heading);
+  font-size: var(--h3-font-size);
+  color: var(--color-heading);
+  margin-bottom: 1.5rem;
+}
+
+.ctaText {
+  font-family: var(--font-body);
+  font-size: var(--body-medium-font-size);
+  color: var(--color-body);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.downloadSection {
+  padding: 5rem 0;
+}
+
+.downloadContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.downloadTitle {
+  font-family: var(--font-heading);
+  font-size: var(--h2-font-size); /* Changed from 36px to variable */
+  color: var(--color-heading);
+  margin-bottom: 1.5rem;
+}
+
+.downloadText {
+  font-family: var(--font-body);
+  font-size: var(--body-medium-font-size); /* Changed from 18px to variable */
+  color: var(--color-body);
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.storeLinks {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.storeOption {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.storeOption h3 {
+  font-family: var(--font-heading);
+  font-size: var(--h4-font-size); /* Changed from 24px to variable */
+  color: var(--color-heading);
+  margin-bottom: 1.5rem;
+}
+
+.storeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.storeButton {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.storeButton:hover {
+  transform: scale(1.02); /* Reduced from 1.05 to make it more subtle */
+  opacity: 0.9; /* Adding slight opacity change for a subtle effect */
+}
+
+.storeLogo {
+  height: 60px;
+  width: auto;
+}
+
+.qrContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrCode {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  padding: 8px;
+  background-color: white;
+}
+
+.qrContainer p {
+  font-family: var(--font-body);
+  font-size: var(--body-small-font-size); /* Changed from 14px to variable */
+  color: var(--color-body);
+}
+
+@media (max-width: 1000px) {
+  .heroSection {
+    padding: 4rem 0 3rem;
+  }
+
+  .storeLinks {
+    gap: 2rem;
+  }
+
+  .qrCode {
+    width: 120px;
+    height: 120px;
+  }
+
+  .storeLogo {
+    height: 50px;
+  }
+
+  /* Ensure everything is centered on mobile */
+  .featureCard,
+  .useCase,
+  .sectionTitle,
+  .sectionContent,
+  .featureTitle,
+  .featureDescription,
+  .productTitle,
+  .productTagline,
+  .downloadTitle,
+  .downloadText,
+  .useCaseTitle,
+  .storeOption,
+  .storeOption h3 {
+    text-align: center;
+  }
+
+  /* Center list items and their content */
+  .useCaseList {
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  /* Make store options take full width */
+  .storeOption {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  /* Center the store content */
+  .storeContent {
+    align-items: center;
+    justify-content: center;
+  }
+}

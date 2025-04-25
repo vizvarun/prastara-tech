@@ -1,0 +1,486 @@
+.navbar {
+  background-color: var(--color-white);
+  color: var(--color-gray-600);
+  padding: 0.5rem 0; /* Reduced padding from 0.75rem */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.scrolled {
+  background-color: var(--color-background-light-transparent);
+  backdrop-filter: blur(
+    20px
+  ); /* Increased blur from 10px to 20px for stronger effect */
+  box-shadow: 0 1px 0 var(--color-shadow);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem; /* Add some horizontal padding */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-gray-600);
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+}
+
+.logo img {
+  height: 42px;
+  margin-right: 0.75rem;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem; /* Reduced gap from 2rem */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  margin-left: auto; /* Push menu to the right */
+}
+
+/* Standardize menu item structure */
+.menu li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 0; /* Reset the padding that was added for the dots */
+}
+
+/* Create a standardized container for the active dot */
+.menu li::after {
+  content: "";
+  display: block;
+  width: 5px; /* Width of dot */
+  height: 5px; /* Height of dot */
+  margin-left: 8px; /* Fixed distance from text */
+  margin-right: 8px; /* Consistent spacing between items */
+  border-radius: 50%;
+  background-color: transparent; /* Invisible by default */
+}
+
+/* Remove the active indicator styling */
+.menu li.active::after {
+  display: none; /* This hides the active indicator dot */
+}
+
+/* Fix specific items that might need adjustment */
+.menu li:nth-child(2)::after, /* About */
+.menu li:nth-child(3)::after /* Solutions */ {
+  margin-left: 8px; /* Ensure exact same spacing */
+}
+
+/* Remove dot container from special items */
+.dropdownContainer::after,
+.menu li:last-child::after {
+  display: none; /* No dot space for dropdown or theme toggle */
+}
+
+/* Theme toggle container */
+.menu li:last-child {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+/* Override any other styles that might be affecting these elements */
+.navLink.active::after {
+  display: none; /* Remove any competing indicators */
+}
+
+/* Make sure dropdownContainer doesn't have conflicting styles */
+.dropdownContainer.active::after {
+  content: none; /* Don't show dot for dropdown container */
+}
+
+/* Ensure link text aligns properly */
+.navLink {
+  color: var(--color-body);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.3rem 0; /* Reduced vertical padding */
+  position: relative;
+  font-family: "Outfit", sans-serif;
+  display: inline-block; /* More consistent than flex for text alignment */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.5px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-body);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Disable underline animation for dropdown links */
+.dropdownContainer .navLink::after {
+  display: none;
+}
+
+.dropdownContainer {
+  position: relative;
+}
+
+.dropdownContainer:hover .chevron {
+  transform: rotate(180deg);
+}
+
+.chevron {
+  font-size: 12px;
+  margin-left: 4px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 12px var(--color-shadow-medium);
+  border-radius: 8px;
+  min-width: 220px;
+  z-index: 1001;
+  padding: 0.75rem 0;
+  animation: fadeIn 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.dropdown::before {
+  content: "";
+  position: absolute;
+  height: 8px; /* Match the gap between navbar item and dropdown */
+  width: 100%;
+  top: -8px;
+  left: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.dropdownArrow {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-white);
+  box-shadow: -1px -1px 1px var(--color-shadow-light);
+}
+
+/* Dropdown header styling */
+.dropdownHeader {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-gray-400);
+  padding: 0 1.25rem 0.75rem;
+  border-bottom: 1px solid var(--color-gray-200);
+  margin-bottom: 0.5rem;
+  cursor: default; /* Indicates it's not clickable */
+}
+
+.dropdownItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1.25rem;
+  color: var(--color-body);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background-color: var(--color-background-light);
+}
+
+.productName {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-heading);
+  margin-bottom: 4px;
+}
+
+.productDesc {
+  font-size: 13px;
+  color: var(--color-gray-500);
+}
+
+/* Create special styling for the Products navlink */
+.dropdownToggle {
+  color: var(--color-body);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.3rem 0; /* Match padding with other navlinks */
+  position: relative;
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 0; /* No extra padding inside */
+  white-space: nowrap;
+}
+
+/* Add styles for the nav controls container */
+.navControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  height: 36px;
+  width: 36px;
+  z-index: 1002; /* Ensure it's above the overlay */
+}
+
+/* Mobile menu button - hidden on desktop */
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--color-body);
+  cursor: pointer;
+  padding: 0.3rem;
+  z-index: 1002;
+}
+
+/* Hide mobile nav controls in desktop view */
+@media (min-width: 1001px) {
+  .navControls {
+    display: none;
+  }
+}
+
+/* Remove nav controls container for desktop */
+.navControls {
+  display: none; /* Hide by default - only shown in mobile */
+}
+
+@media (max-width: 992px) {
+  .menu {
+    gap: 1rem;
+  }
+
+  .navLink,
+  .dropdownToggle {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* Create a flex layout with space-between to position elements at extremes */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+    max-width: 100vw !important;
+  }
+
+  .navbar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  /* Show nav controls in mobile view */
+  .navControls {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .mobileMenuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Remove margin-left auto from menu in mobile */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-background);
+    box-shadow: -5px 0 15px var(--color-shadow);
+    flex-direction: column;
+    padding: 5rem 2rem 2rem;
+    transition: right 0.3s ease;
+    gap: 1.5rem;
+    align-items: flex-start;
+    overflow-y: auto;
+    z-index: 1001;
+    margin-left: 0;
+  }
+
+  .menuOpen {
+    right: 0;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .overlayVisible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li::after {
+    display: none;
+  }
+
+  .navLink,
+  .dropdownToggle {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 16px;
+  }
+
+  .dropdown {
+    display: none !important; /* Force hide the desktop dropdown in mobile */
+  }
+
+  /* Product toggle special styling for mobile */
+  .dropdownToggle {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .dropdownArrow {
+    display: none;
+  }
+
+  .navLink::after,
+  .dropdownToggle::after {
+    display: none;
+  }
+
+  /* Remove the absolute positioning for theme toggle since it's now in navControls */
+  .themeToggle {
+    position: static;
+    top: auto;
+    right: auto;
+  }
+
+  .desktopOnly {
+    display: none !important;
+  }
+}
+
+/* Mobile dropdown styling - accordion effect - improved positioning and appearance */
+.mobileDropdown {
+  display: none; /* Hidden by default */
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+  width: 100%;
+  border-radius: 6px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background-light);
+  position: relative;
+  left: 0;
+}
+
+.mobileDropdownOpen {
+  display: block;
+  max-height: 500px; /* Large enough to accommodate content */
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mobileDropdownItem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem 1rem;
+  margin-left: 1rem;
+  border-left: 2px solid var(--color-gray-300);
+  transition: border-color 0.2s ease;
+}
+
+.mobileDropdownItem:hover {
+  border-left-color: var(--color-primary);
+}
+
+/* Rotate chevron when dropdown is open in mobile */
+.dropdownOpen .chevron {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 36px;
+  }
+
+  .navLink,
+  .dropdownToggle {
+    font-size: 15px;
+  }
+
+  .navControls {
+    gap: 0.5rem; /* Reduce gap on very small screens */
+  }
+}

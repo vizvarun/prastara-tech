@@ -1,0 +1,235 @@
+.notFoundPage {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: var(--color-background);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.content {
+  padding: 3rem;
+  background-color: var(--color-background-light);
+  border-radius: 24px;
+  box-shadow: 0 8px 30px var(--color-shadow-light);
+  border: 3px solid var(--color-stroke-light);
+}
+
+.imageContainer {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.iconGroup {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.notFoundIcon,
+.searchIcon,
+.questionIcon {
+  font-size: 80px;
+  color: var(--color-primary);
+}
+
+.searchIcon {
+  color: var(--color-heading);
+  transform: translateY(10px);
+}
+
+.questionIcon {
+  color: var(--color-gray-400);
+}
+
+.errorCode {
+  font-family: var(--font-heading);
+  font-size: 120px;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-shadow: 4px 4px 0 var(--color-stroke-light);
+}
+
+.errorTitle {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin: 0.5rem 0 1.5rem;
+}
+
+.errorMessage {
+  font-family: var(--font-body);
+  font-size: 20px;
+  color: var(--color-body);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.primaryButton {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 6px 0 var(--color-primary-dark);
+  position: relative;
+  top: 0;
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 0 var(--color-primary-dark);
+}
+
+.primaryButton:active {
+  top: 3px;
+  box-shadow: 0 3px 0 var(--color-primary-dark);
+}
+
+.secondaryButton {
+  display: inline-block;
+  background-color: var(--color-background);
+  color: var(--color-body);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 18px;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 3px solid var(--color-stroke-light);
+  box-shadow: 0 6px 0 var(--color-gray-300);
+  position: relative;
+  top: 0;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 9px 0 var(--color-gray-300);
+}
+
+.secondaryButton:active {
+  top: 3px;
+  box-shadow: 0 3px 0 var(--color-gray-300);
+}
+
+.suggestionsContainer {
+  background-color: var(--color-background);
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin-top: 1rem;
+  display: inline-block;
+  text-align: left;
+  border: 2px dashed var(--color-stroke-light);
+}
+
+.suggestionsTitle {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+}
+
+.suggestionsList {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-body);
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.suggestionsList li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem;
+  }
+
+  .errorCode {
+    font-size: 100px;
+  }
+
+  .errorTitle {
+    font-size: 36px;
+  }
+
+  .errorMessage {
+    font-size: 18px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .iconGroup {
+    gap: 1rem;
+  }
+
+  .notFoundIcon,
+  .searchIcon,
+  .questionIcon {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .errorCode {
+    font-size: 80px;
+  }
+
+  .errorTitle {
+    font-size: 28px;
+  }
+
+  .suggestionsContainer {
+    width: 100%;
+  }
+
+  .iconGroup {
+    gap: 0.75rem;
+  }
+
+  .notFoundIcon,
+  .searchIcon,
+  .questionIcon {
+    font-size: 50px;
+  }
+}

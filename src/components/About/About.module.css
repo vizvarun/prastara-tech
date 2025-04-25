@@ -1,0 +1,72 @@
+.section {
+  padding: 4rem 0;
+  width: 100%;
+  position: relative;
+  background-color: var(--color-background-section);
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  background-color: var(--color-background-section);
+  z-index: -1;
+}
+
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 0 2rem;
+}
+
+.sectionName {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--body-small-font-size);
+  font-weight: 400;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--h2-font-size);
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 115%;
+}
+
+.sectionContent {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--body-medium-font-size);
+  font-weight: 400;
+  color: var(--color-body);
+  text-align: center;
+  line-height: 1.5;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+  .section {
+    margin-top: -8rem; /* Less overlap on smaller screens */
+    padding-top: 4rem;
+  }
+
+  .sectionContainer {
+    padding-top: 2rem;
+  }
+
+}

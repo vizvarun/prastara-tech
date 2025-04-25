@@ -1,0 +1,115 @@
+/* Global responsive typography system */
+
+/* Base typography */
+:root {
+  --h1-font-size: 48px;
+  --h2-font-size: 36px;
+  --h3-font-size: 28px;
+  --h4-font-size: 24px;
+  --body-large-font-size: 20px;
+  --body-medium-font-size: 18px;
+  --body-font-size: 16px;
+  --body-small-font-size: 14px;
+
+  /* Line height ratios */
+  --heading-line-height: 1.2;
+  --body-line-height: 1.5;
+}
+
+/* Extra large devices (1500px+) */
+@media (min-width: 1500px) {
+  :root {
+    --h1-font-size: 64px;
+    --h2-font-size: 48px;
+    --h3-font-size: 36px;
+    --h4-font-size: 28px;
+    --body-large-font-size: 22px;
+    --body-medium-font-size: 20px;
+    --body-font-size: 18px;
+    --body-small-font-size: 16px;
+  }
+}
+
+/* Large devices (1200px - 1499px) */
+@media (max-width: 1499px) {
+  :root {
+    --h1-font-size: 54px;
+    --h2-font-size: 42px;
+    --h3-font-size: 32px;
+    --h4-font-size: 26px;
+    --body-large-font-size: 20px;
+    --body-medium-font-size: 18px;
+    --body-font-size: 16px;
+    --body-small-font-size: 14px;
+  }
+}
+
+/* Medium-large devices (1000px - 1199px) */
+@media (max-width: 1199px) {
+  :root {
+    --h1-font-size: 48px;
+    --h2-font-size: 36px;
+    --h3-font-size: 28px;
+    --h4-font-size: 24px;
+    --body-large-font-size: 20px;
+    --body-medium-font-size: 18px;
+    --body-font-size: 16px;
+    --body-small-font-size: 14px;
+  }
+}
+
+/* Medium devices (768px - 999px) */
+@media (max-width: 999px) {
+  :root {
+    --h1-font-size: 38px;
+    --h2-font-size: 36px;
+    --h3-font-size: 34px;
+    --h4-font-size: 28px;
+    --body-large-font-size: 18px;
+    --body-medium-font-size: 17px;
+    --body-font-size: 16px;
+    --body-small-font-size: 14px;
+  }
+}
+
+/* Small-medium devices (576px - 767px) */
+@media (max-width: 767px) {
+  :root {
+    --h1-font-size: 36px;
+    --h2-font-size: 28px;
+    --h3-font-size: 22px;
+    --h4-font-size: 18px;
+    --body-large-font-size: 17px;
+    --body-medium-font-size: 16px;
+    --body-font-size: 15px;
+    --body-small-font-size: 14px;
+  }
+}
+
+/* Small devices (480px - 575px) */
+@media (max-width: 575px) {
+  :root {
+    --h1-font-size: 32px;
+    --h2-font-size: 24px;
+    --h3-font-size: 20px;
+    --h4-font-size: 18px;
+    --body-large-font-size: 16px;
+    --body-medium-font-size: 15px;
+    --body-font-size: 14px;
+    --body-small-font-size: 13px;
+  }
+}
+
+/* Extra small devices (max-width: 479px) */
+@media (max-width: 479px) {
+  :root {
+    --h1-font-size: 28px;
+    --h2-font-size: 22px;
+    --h3-font-size: 18px;
+    --h4-font-size: 16px;
+    --body-large-font-size: 16px;
+    --body-medium-font-size: 15px;
+    --body-font-size: 14px;
+    --body-small-font-size: 12px;
+  }
+}

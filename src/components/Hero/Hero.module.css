@@ -1,0 +1,200 @@
+.hero {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1; /* Lower z-index than About section */
+}
+
+/* Define animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0.8;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding: 0 15px; /* Add padding for all screen sizes */
+}
+
+.title {
+  font-size: var(--h1-font-size);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  white-space: normal;
+  animation: fadeInUp 0.8s ease-out forwards;
+  word-spacing: normal;
+  word-break: keep-all;
+}
+
+/* Style to keep the dot with its preceding word */
+.wordWithDot {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.coloredDot {
+  color: var(--color-primary);
+  display: inline;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.titleSpan {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.subtitle {
+  font-size: var(--body-large-font-size);
+  margin-bottom: 2.5rem;
+  line-height: 1.4;
+  color: var(--color-body);
+  font-family: var(--font-body);
+  font-weight: 400;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: normal;
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+.ctaContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+.ctaPrimary {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 500;
+  padding: 1rem 3.5rem; /* Increased horizontal padding from 2.5rem to 3.5rem */
+  min-width: 200px; /* Added minimum width */
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  font-family: var(--font-heading);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaPrimary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaPrimary:active {
+  transform: translateY(-1px);
+}
+
+.heroImageContainer {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  animation: fadeInScale 1s ease-out 0.9s forwards;
+  opacity: 0;
+  animation-fill-mode: both;
+}
+
+.heroImage {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px var(--color-shadow-medium);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.heroImageContainer:hover .heroImage {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px var(--color-shadow-medium);
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    padding: 4.5rem 0;
+  }
+
+  .subtitle {
+    margin-bottom: 2.25rem;
+  }
+
+  .ctaContainer {
+    margin-top: 2.25rem;
+  }
+
+  .heroImageContainer {
+    margin-top: 2.5rem;
+  }
+}
+
+/* Add new media query for smaller devices */
+@media (max-width: 500px) {
+  .ctaContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaPrimary {
+    padding: 0.9rem 2rem;
+    min-width: 180px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .title {
+    font-size: calc(var(--h1-font-size) * 1.25);
+  }
+
+  .subtitle {
+    font-size: var(--body-font-size);
+  }
+  .heroImage {
+    min-width: 350px;
+    border-radius: 8px;
+  }
+}

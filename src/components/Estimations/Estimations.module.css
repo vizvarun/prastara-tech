@@ -1,0 +1,194 @@
+.section {
+  padding-bottom: 4rem;
+  width: 100%;
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+}
+
+.sectionContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.sectionName {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+.contentRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.sectionTitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: var(--h4-font-size);
+  font-weight: 700;
+  color: var(--color-heading);
+  text-align: left;
+  line-height: 115%;
+  flex: 1;
+  max-width: 700px;
+  margin: 0;
+}
+
+.sectionContent {
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-body);
+  text-align: center;
+  line-height: 1.5;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  padding: 2rem;
+  border-radius: 24px;
+  background-color: var(--color-background-light);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: fit-content;
+}
+
+.cardIcon {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+}
+
+.cardTitle {
+  font-family: "DM Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.cardContent {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-body);
+  text-align: left;
+  line-height: 1.5;
+  min-height: fit-content;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.readMoreLink {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  color: var(--color-primary);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.readMoreLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: calc(100% - 24px);
+  height: 1px;
+  background-color: var(--color-primary);
+  transition: background-color 0.3s ease;
+}
+
+.readMoreLink:hover {
+  color: var(--color-primary-dark);
+}
+
+.readMoreLink:hover::after {
+  background-color: var(--color-primary-dark);
+}
+
+.rightArrow {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.readMoreLink:hover .rightArrow {
+  transform: translateX(3px);
+}
+
+.ctaButton {
+  background-color: var(--color-primary);
+  color: white;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.ctaButton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .contentRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sectionTitle {
+    text-align: center;
+  }
+
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
