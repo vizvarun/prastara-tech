@@ -162,7 +162,9 @@ const TermsAndConditions = () => {
             <div
               id="section1"
               className={styles.section}
-              ref={(el) => (sectionRefs.current.section1 = el)}
+              ref={(el) => {
+                sectionRefs.current.section1 = el;
+              }}
             >
               <h2 className={styles.sectionTitle}>1. Introduction</h2>
               <p className={styles.text}>
@@ -175,7 +177,9 @@ const TermsAndConditions = () => {
             <div
               id="section2"
               className={styles.section}
-              ref={(el) => (sectionRefs.current.section2 = el)}
+              ref={(el) => {
+                sectionRefs.current.section2 = el;
+              }}
             >
               <h2 className={styles.sectionTitle}>2. Use of Services</h2>
               <p className={styles.text}>
@@ -189,7 +193,9 @@ const TermsAndConditions = () => {
             <div
               id="section3"
               className={styles.section}
-              ref={(el) => (sectionRefs.current.section3 = el)}
+              ref={(el) => {
+                sectionRefs.current.section3 = el;
+              }}
             >
               <h2 className={styles.sectionTitle}>3. Intellectual Property</h2>
               <p className={styles.text}>
@@ -203,7 +209,9 @@ const TermsAndConditions = () => {
             <div
               id="section4"
               className={styles.section}
-              ref={(el) => (sectionRefs.current.section4 = el)}
+              ref={(el) => {
+                sectionRefs.current.section4 = el;
+              }}
             >
               <h2 className={styles.sectionTitle}>
                 4. Limitation of Liability
@@ -219,7 +227,9 @@ const TermsAndConditions = () => {
             <div
               id="section5"
               className={styles.section}
-              ref={(el) => (sectionRefs.current.section5 = el)}
+              ref={(el) => {
+                sectionRefs.current.section5 = el;
+              }}
             >
               <h2 className={styles.sectionTitle}>5. Governing Law</h2>
               <p className={styles.text}>
@@ -232,7 +242,9 @@ const TermsAndConditions = () => {
             <div
               id="section6"
               className={styles.section}
-              ref={(el) => (sectionRefs.current.section6 = el)}
+              ref={(el) => {
+                sectionRefs.current.section6 = el;
+              }}
             >
               <h2 className={styles.sectionTitle}>6. Changes to Terms</h2>
               <p className={styles.text}>
@@ -245,7 +257,9 @@ const TermsAndConditions = () => {
             <div
               id="section7"
               className={styles.section}
-              ref={(el) => (sectionRefs.current.section7 = el)}
+              ref={(el) => {
+                sectionRefs.current.section7 = el;
+              }}
             >
               <h2 className={styles.sectionTitle}>7. Contact Us</h2>
               <p className={styles.text}>
