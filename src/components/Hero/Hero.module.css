@@ -174,7 +174,7 @@
 /* Add new media query for smaller devices */
 @media (max-width: 500px) {
   .hero {
-    padding-top: 1.5rem !important;
+    padding-top: 1rem !important;
   }
   .ctaContainer {
     flex-direction: column;
